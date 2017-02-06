@@ -16,8 +16,9 @@ a:active {
 
 body 
 	{
-		background-color: #DAD8A7;
-		background-image: url("hyp3.gif");
+		background: url(hills.png) no-repeat;
+  		background-size: 200%;
+  		background-color: #000000;
 	}
 
 h1	{

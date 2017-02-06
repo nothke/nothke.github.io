@@ -1,0 +1,37 @@
+a:link {
+    color: #3FB8AF;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: #FF3D7F;
+}
+
+a:active {
+    color: #3FB8AF;
+}
+
+body 
+	{
+		background-color: #DAD8A7;
+	}
+
+h1	{
+		color: #7FC7AF;
+		font-family: monospace;
+		font-weight:normal;
+		letter-spacing: 7px;
+		font-size: 40px;
+		text-align: center;
+	}
+
+p 	{
+		color: #FF3D7F;
+		font-family:  monospace;
+		letter-spacing: 2px;
+		font-size: 16px;
+		text-align: center;
+	}

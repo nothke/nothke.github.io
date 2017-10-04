@@ -165,7 +165,7 @@ var MIN_TENSION = 50;
 var MAX_TENSION = 100;
 
 // Ticks till debris starts dying
-var MIN_LIFETIME = 200;
+var MIN_LIFETIME = 300;
 var MAX_LIFETIME = 1000;
 
 var MAX_VELOCITY = 0.01;
@@ -273,7 +273,7 @@ function UpdateDebris() {
             CreateDebrisPiece(
                 new THREE.Vector3(d.position.x, d.position.y, d.position.z),
                 d.velocity,
-                d.generation + (1 + Math.round(Math.random() * 2)));
+                d.generation + (1 + Math.round(Math.random() * 1)));
             //}
 
             d.tension = randomTension();

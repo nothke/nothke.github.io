@@ -10,7 +10,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-var texture = new THREE.TextureLoader().load("reentry/textures/flare.png");
+var texture = new THREE.TextureLoader().load("flare.png");
 
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var flareMaterial = new THREE.MeshBasicMaterial({
@@ -23,7 +23,7 @@ var flareMaterial = new THREE.MeshBasicMaterial({
     blending: THREE.AdditiveBlending
 });
 
-var textureTail = new THREE.TextureLoader().load("reentry/textures/edge.png");
+var textureTail = new THREE.TextureLoader().load("edge.png");
 
 var tailMaterial = new THREE.MeshBasicMaterial({
     map: textureTail,

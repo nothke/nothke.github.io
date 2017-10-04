@@ -16,9 +16,8 @@ a:active {
 
 body 
 	{
-		background: url(hills.png) no-repeat;
+		background: #BDC196 url(hills.png) no-repeat;
   		background-size: 200%;
-  		background-color: #000000;
 	}
 
 h1	{

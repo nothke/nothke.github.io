@@ -96,13 +96,13 @@ gradient[5].multiplyScalar(0.03);
 gradient[6].multiplyScalar(0.01);
 gradient[7].multiplyScalar(0.01);
 
-var STRIP_LENGTH = 0.05;
+var STRIP_LENGTH = 0.3;
 var STRIP_WIDTH = 0.1;
 
 function CreateStrip() {
     var strip = new THREE.Geometry();
     for (i = 0; i < 10; i++) {
-        var h = Math.pow(i, 2) * STRIP_LENGTH;
+        var h = Math.pow(i, 1) * STRIP_LENGTH;
         var w = 1 + i * 0.5;
         strip.vertices.push(new THREE.Vector3(-1.0 * STRIP_WIDTH * w, i * 2 * h, 0.0));
         strip.vertices.push(new THREE.Vector3(1.0 * STRIP_WIDTH * w, i * 2 * h, 0.0));
@@ -161,12 +161,12 @@ var flare = CreateQuad();
 var strip = CreateStrip();
 
 // Ticks it takes to split
-var MIN_TENSION = 50;
-var MAX_TENSION = 100;
+var MIN_TENSION = 10;
+var MAX_TENSION = 200;
 
 // Ticks till debris starts dying
-var MIN_LIFETIME = 300;
-var MAX_LIFETIME = 1000;
+var MIN_LIFETIME = 100;
+var MAX_LIFETIME = 600;
 
 var MAX_VELOCITY = 0.01;
 
@@ -178,7 +178,7 @@ function CreateDebrisPiece(position, velocity, generation) {
     flareMesh.position.set(position.x, position.y, position.z);
     stripMesh.position.set(position.x, position.y, position.z);
 
-    flareMesh.scale.set(1, 1, 1);
+    //flareMesh.scale.set(1, 1, 1);
 
     scene.add(flareMesh);
     scene.add(stripMesh);
@@ -201,7 +201,7 @@ function CreateDebrisPiece(position, velocity, generation) {
 
 function randomVelocity() {
     return new THREE.Vector3(
-        (-0.5 + Math.random()) * MAX_VELOCITY,
+        (-0.5 + Math.random()) * MAX_VELOCITY * 1.5,
         (Math.random()) * MAX_VELOCITY / 2,
         (-0.5 + Math.random()) * MAX_VELOCITY,
     );
@@ -226,7 +226,7 @@ function smoothstep(min, max, value) {
 
 var INFLATION_SPEED = 0.005;
 
-var MAX_GENERATIONS = 3;
+var MAX_GENERATIONS = 5;
 
 function UpdateDebris() {
     for (var i = 0; i < debris.length; i++) {
@@ -256,8 +256,10 @@ function UpdateDebris() {
 
         brightness *= 0.5;
 
-        d.strip.scale.x = brightness;
-        d.flare.scale.set(brightness, brightness, brightness);
+        var scale = Clamp(brightness, 0.0001, 1);
+
+        d.strip.scale.x = scale * 1.25;
+        d.flare.scale.set(scale, scale, scale);
 
 
         if (d.generation != 0 && d.lifetime == 200)
@@ -308,7 +310,7 @@ var animate = function () {
 
     ticks++;
 
-    if (ticks > 1000 && debris.length == 1) {
+    if (ticks > 1000 && debris.length == 10) {
         CreateDebrisPiece(new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 0, 0), 0);
     }
 

@@ -1,0 +1,53 @@
+
+        html, body {
+          position: fixed;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-image: url("back.jpg");
+            background-size: cover;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        body {
+            display: table;
+        }
+
+        p {
+            margin: 10px;
+            font-family: monospace;
+            font-size: 60;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+
+        }
+
+        .help-line{
+          font-weight: normal;
+          font-size: 15;
+        }
+
+        .my-block {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .bottomBlock{
+            position: fixed;
+            top: 50vh;
+            text-align: center;
+            vertical-align: bottom;
+        }
+
+        .infobox{
+            position: fixed;
+            left: 0px;
+            top: 15px;
+            right: 0px;
+            bottom: 15px;
+        }

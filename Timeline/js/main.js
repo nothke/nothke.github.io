@@ -1,9 +1,8 @@
 var numberOfElements = 300;
 
 var zoomLevel = 5;
-var scale = Math.pow(2, zoomLevel);
+var scale = 0
 var x = 0;
-var baseX = 0;
 
 var scrollMult = 0.1;
 
@@ -22,6 +21,12 @@ document.body.appendChild(svg);
 var svgRect = svg.getBoundingClientRect();
 var ww = svgRect.width;
 var wh = svgRect.height;
+
+function calcScale() {
+    scale = Math.pow(2, zoomLevel);
+}
+
+calcScale();
 
 function createBlock(start, end, title = "") {
     //var group = document.createElementNS(svgns, "g");
@@ -62,13 +67,13 @@ function createBlock(start, end, title = "") {
 
 function repaintBlocks() {
 
-    var ww = svg.getBoundingClientRect().width;
+    var hww = ww / 2
 
     blocks.forEach(b => {
         var bx = b.start;
         var bw = b.end - b.start;
 
-        bx = (x + bx) * scale + ww / 2;
+        bx = (x + bx) * scale + hww;
         bw = bw * scale;
 
         b.rect.setAttribute("x", bx);
@@ -77,17 +82,21 @@ function repaintBlocks() {
         b.fob.setAttribute("x", bx);
         b.fob.setAttribute("width", bw);
     });
+
+    console.log(x);
 }
 
 function onScroll(event) {
     var wheelData = normalizeWheel(event);
 
     //console.log("Scrollin!" + event.deltaY);
-    console.log("Scroll: " + wheelData.spinY);
+
     //rectX += event.deltaY * 3;
     zoomLevel -= wheelData.spinY * scrollMult;
+    calcScale();
 
-    scale = Math.pow(2, zoomLevel);
+    console.log("Scroll: " + wheelData.spinY + " zoomLevel: " + zoomLevel + " scale: " + scale);
+
     repaintBlocks();
 }
 
@@ -130,6 +139,8 @@ for (let i = 0; i < numberOfElements; i++) {
     createBlock(start, end, i);
 }
 
+//createBlock(5000, 5000+10);
+
 document.addEventListener("wheel", onScroll);
 document.addEventListener("mousedown", onStartDrag);
 document.addEventListener("mouseup", onEndDrag);
@@ -142,4 +153,24 @@ function update() {
 
 //update();
 
+function focusAll() {
+    var min = Number.POSITIVE_INFINITY;
+    var max = Number.NEGATIVE_INFINITY;
+
+    blocks.forEach(b => {
+        if (b.start < min) min = b.start;
+        if (b.end > max) max = b.end;
+    });
+
+    var median = (min + max) / 2;
+    var diff = max - min;
+
+    x = -median;
+    zoomLevel = Math.log2(ww / (diff + 100));
+    calcScale();
+
+    console.log("Min " + min + ", Max " + max);
+}
+
+focusAll();
 repaintBlocks();

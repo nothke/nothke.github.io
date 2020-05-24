@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8>
+	<title>Timeline</title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			-webkit-box-sizing: border-box;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		canvas {
+			display: block;
+			border: 1px solid #000000;
+		}
+
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+
+		text {
+			fill: #8a4040;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		foreignObject {
+			color: rgb(255, 255, 255);
+			font: 18px serif;
+			font-family: monospace;
+			font-weight: bold;
+			height: 100px;
+		}
+
+		.unselectable {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <canvas id="myCanvas"></canvas> -->
+
+	<!--
+	<svg width="400" height="110">
+		<rect width="300" height="100" />
+	</svg>
+	-->
+	<svg id="main_svg" height="140" width="140">
+		<defs>
+			<filter id="f2" x="0" y="0" width="200%" height="200%">
+				<feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+				<feOffset in="blur" dx="3" dy="3" result="offsetBlur" />
+				<feFlood flood-color="#777777" flood-opacity="0.5" result="offsetColor" />
+				<feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur" />
+				<feBlend in="SourceGraphic" in2="offsetBlur" mode="normal" />
+				<-- in="SourceGraphic" -->
+			</filter>
+		</defs>
+	</svg>
+
+	<script type="text/javascript" src="js/normalizeWheel.js"></script>
+	<script type="text/javascript" src="js/svg/svg.min.js"></script>
+	<script type="text/javascript" src="js/gui/dat.gui.min.js"></script>
+
+	<script type="text/javascript" src="js/textNode.js"></script>
+	<script type="text/javascript" src="js/timelineThreads.js"></script>
+	<script type="text/javascript" src="js/timelineView.js"></script>
+	<script type="text/javascript" src="js/sheetsReader.js"></script>
+	<script type="text/javascript" src="js/Table.js"></script>
+	<script type="text/javascript" src="js/missionData.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+
+	<script type="text/javascript" src="js/main2.js"></script>
+
+	<!--
+	<script src="js/normalizeWheel.js"></script>
+	<script src="js/main.js"></script>
+	-->
+</body>
+
+
+
+</html>
+
+<!--
+	div {
+		margin: 5px;
+		overflow: hidden;
+	}
+	-->

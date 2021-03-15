@@ -17,12 +17,15 @@ a:active {
 body 
 	{
 		background: #BDC196 url(hills.png) no-repeat;
-  		background-size: 200%;
+		background-attachment: fixed;
+		background-position: 50% 0;
+		background-size: cover;
 	}
 
 h1	{
 		color: #7FC7AF;
 		font-family: monospace;
+		font-weight: bold;
 		font-weight:normal;
 		letter-spacing: 7px;
 		font-size: 40px;
@@ -32,9 +35,11 @@ h1	{
 p 	{
 		color: #FF3D7F;
 		font-family:  monospace;
+		font-weight: bold;
 		letter-spacing: 2px;
 		font-size: 16px;
 		text-align: center;
+		line-height: 200%;
 	}
 
 blockquote

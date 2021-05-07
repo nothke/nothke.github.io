@@ -42,6 +42,11 @@ p 	{
 		line-height: 200%;
 	}
 
+u 	{
+		color: #769290;
+		text-decoration: none;
+	}
+
 blockquote
 	{
 		text-align: center;

@@ -1,26 +1,31 @@
 Agro, Bosna
-Arhi, Čačak
-Avala, Dalmacija
-Avio, Drina
-Belo, Dunav
-Beo, eksport-import
-Beton, Hrvatska
-Bosno, Jadran
-Brodo, Morava
-Bruto, Niš
-Centro, Sava
-Delta, Slovenija
-Dento, Valjevo
-Disko, Vojvodina
-Dobro,teks
-Drvo,agrar
-Eko,auto
-Elektro,banka
-Energo,bašta
-Grado,biro
-Gvožđo,borba
-Hemo,bran
-Hrvo,brana
+Alu, Čačak
+Arhi, Dalmacija
+Avala, Drina
+Avio, Dunav
+Belo, eksport-import
+Beo, Hrvatska
+Beton, Jadran
+Bosno, Morava
+Brodo, Niš
+Bruto, Sava
+Centro, Slovenija
+Delta, Valjevo
+Dento, Vojvodina
+Celo, Makedonija
+Tito, Dubrava
+Disko, Banat
+Dobro, Priboj
+Drvo, Tara
+Eko,teks
+Elektro,agrar
+Energo,auto
+Grado,banka
+Gvožđo,bašta
+Hemo,biro
+Hrvo,borba
+Jugo,bran
+Jugo,brana
 Jugo,bravar
 Kino,brod
 Lito,bus
@@ -55,59 +60,59 @@ Vino,keramika
 Vodo,knjiga
 Zemljo,kom
 Žito,kombajn
-,kombinat
-,komunikacije
-,kop
-,krajina
-,kultura
-,laboratorija
-,lada
-,led
-,linija
-,lutrija
-,mehanika
-,mermer
-,mes
-,nafta
-,nameštaj
-,napredak
-,neimar
-,ogrev
-,opeka
-,optika
-,osiguranje
-,otpad
-,otpor
-,panonija
-,petrol
-,pionir
-,plan
-,plin
-,praktik
-,preduzeće
-,preduzetnik
-,prehrana
-,premija
-,privreda
-,prizma
-,proces
-,prodaja
-,produkt
-,progres
-,proizvod
-,projekt
-,promet
-,prospekt
-,put
-,putnik
-,računar
-,rad
-,rad
-,radio
-,radnik
-,rafinerija
-,rama
-,rasad
+Železo,kombinat
+Zrako,komunikacije
+Sito,kop
+Ugljo,krajina
+Mega,kultura
+Igro,laboratorija
+Toplo,lada
+Grafo,led
+Geo,linija
+Hidro,lutrija
+Higro,mehanika
+Mikro,mermer
+Makro,mes
+Crno,nafta
+Mašto,nameštaj
+Ribo,napredak
+Krivo,neimar
+Vojno,ogrev
+Trans,opeka
+Topo,optika
+Takto,osiguranje
+Ritmo,otpad
+Yugo,otpor
+Tito,panonija
+Slavo,petrol
+Samo,pionir
+Protiv,plan
+Kontra,plin
+Bio,praktik
+Plino,preduzeće
+Auto,preduzetnik
+Proto,prehrana
+Kemo,premija
+Kozmo,privreda
+Kosmo,prizma
+Nitro,proces
+Neutro,prodaja
+Čoko,produkt
+Vibro,progres
+Inter,proizvod
+Intro,projekt
+Infra,promet
+Kargo,prospekt
+Digi,put
+Foto,putnik
+Pivo,računar
+Seno,rad
+Kava,rad
+Meteo,radio
+Psiho,radnik
+Biljo,rafinerija
+Rudo,rama
+Metro,rasad
 ,ratar
 ,razvod
 ,razvoj
@@ -158,3 +163,174 @@ Zemljo,kom
 ,zavod
 ,zidar
 ,zubar
+,ekonom
+,ekonomist
+,proleter
+,komision
+,klinika
+,dvorište
+,tvor
+,plov
+,logika
+,kompas
+,komerc
+,morf
+,teks
+,spoj
+,kabal
+,plast
+,plastika
+,lom
+,kamen
+,rez
+,komitet
+,struka
+,tekt
+,stočar
+,igra
+,ekonomija
+,zadruga
+,benzin
+,karton
+,margarin
+,sastav
+,zajednica
+,lov
+,lovište
+,pravo
+,metron
+,organ
+,organizacija
+,asocijacija
+,socijal
+,trafo
+,trafon
+,medicina
+,tron
+,poezija
+,boj
+,oružje
+,klub
+,omladina
+,dom
+,komora
+,protektorat
+,rektorat
+,sektor
+,zabavnik
+,medikament
+,moda
+,butik
+,limar
+,vlak
+,kanal
+,tunel
+,zabavište
+,dnevnik
+,uprava
+,bilateral
+,odbrana
+,dalmatinac
+,dućan
+,sprovod
+,pogrebnik
+,grobar
+,skop
+,keks
+,biskvit
+,sistem
+,sustav
+,oglas
+,materijal
+,kemija
+,disk
+,pobeda
+,cesta
+,ceste
+,dvor
+,željezara
+,obrt
+,zanat
+,impeks
+,agent
+,postrojenje
+,former
+,transformator
+,metrika
+,politika
+,bunar
+,delikates
+,elektron
+,elektrana
+,proton
+,azotara
+,šećerana
+,špek
+,zvezda
+,konkordija
+,konditor
+,diskont
+,analitika
+,statistika
+,struktura
+,duvan
+,duhan
+,tabak
+,partizan
+,partizan
+,kultivar
+,tisak
+,tisk
+,rejon
+,tel
+,split
+,varna
+,viadukt
+,tramvaj
+,lustracija
+,apoteka
+,sanitet
+,zdravlje
+,trolejbus
+,trokut
+,sir
+,majonez
+,cvet
+,fabrika
+,tvornica
+,statika
+,herbal
+,bon
+,kafilerija
+,udarnik
+,udarnik
+,rasadnik
+,prevoz
+,prevoj
+,nautika
+,maziva
+,motor
+,lubrikant
+,derivat
+,manufaktura
+,instalacije
+,matika
+,obuća
+,odeća
+,akademija
+,karta
+,mapa
+,dekstroza
+,rudnik
+,far
+,luksuz
+,hotel
+,motel
+,rudar
+,magnet
+,bakar
+,živ
+,pogon
+,centar
+,papir
+,prom

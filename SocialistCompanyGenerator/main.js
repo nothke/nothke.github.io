@@ -10,17 +10,7 @@ var csvPath = "SocComGen_names.csv";
 var jsonPath = "https://spreadsheets.google.com/feeds/list/1T3-e6tCywND4s5K0HtBjPwJdwp_USsRCLa21hM9qrSM/od6/public/values?alt=json&callback=dataCallback";
 
 $(document).ready(function() {
-	$.ajax({
-		type: 'GET',
-		dataType: 'jsonp',
-		url: jsonPath, //"testJson.js",
-		jsonpCallback: 'dataCallback',
-	}).then(
-		function(){ console.log("Succeded retrieving JSONP file")} ,
-		function(){
-			console.log("Failed retrieving JSONP file, reading .csv");
-			loadData();
-		})
+	loadData();
 });
 
 function dataCallback( data ) {

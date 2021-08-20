@@ -19,16 +19,20 @@
         }
 
         p {
-            margin: 10px;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin: 8px;
+            margin-left: 30px;
+            margin-right: 30px;
             font-family: 'Roboto Condensed', sans-serif;
             letter-spacing: 0.2ch;
-            font-size: 60;
+            font-size: 68;
             font-weight: bold;
             text-align: center;
             color: white;
 
+        }
+
+        a {
+            color: rgb(180, 255, 173);
         }
 
         #rectangle {
@@ -41,9 +45,19 @@
 
         }
 
+        #pole {
+            background-image: url("pole.png");
+            background:#0059b8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
         .help-line{
-          font-weight: normal;
+          font-weight: bold;
+          font-family: monospace;
           font-size: 15;
+          color: white;
         }
 
         .my-block {

@@ -5,7 +5,7 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            background-image: url("back.jpg");
+            background-image: url("finland_back.jpg");
             background-size: cover;
 
             background-repeat: no-repeat;
@@ -13,16 +13,31 @@
         }
 
         body {
-            display: table;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         p {
             margin: 10px;
-            font-family: monospace;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: 0.2ch;
             font-size: 60;
             font-weight: bold;
             text-align: center;
-            color: black;
+            color: white;
+
+        }
+
+        #rectangle {
+            background:#0059b8;
+            border-radius: 10px;
+            width: min-content;
+            /*margin: auto*/
+            outline: 3px solid #0059b8;
+            border: 5px solid white;
 
         }
 

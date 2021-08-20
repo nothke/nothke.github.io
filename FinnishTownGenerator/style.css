@@ -35,7 +35,7 @@
             color: rgb(180, 255, 173);
         }
 
-        #rectangle {
+        #sign {
             background:#0059b8;
             border-radius: 10px;
             width: min-content;
@@ -51,6 +51,11 @@
             position: absolute;
             top: 50%;
             left: 50%;
+        }
+
+        #loading {
+            font-size: 32;
+            font-family: monospace;
         }
 
         .help-line{

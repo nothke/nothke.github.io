@@ -12,17 +12,23 @@ $(document).ready(function () {
 		(data) => { // Success
 			console.log("Success");
 			loadWordsFromCSV(data);
-			ready = true;
+			enable();
 		},
 		(data) => { // Fail
 			requestCSV(localCsvPath, (data) => {
 				loadWordsFromCSV(data) // Success
 
 				console.log("Loaded from local csv");
-				ready = true;
+				enable();
 			});
 		})
 });
+
+function enable() {
+	$("div#sign").show();
+	$("p#loading").hide();
+	ready = true;
+}
 
 function loadWordsFromCSV(text) {
 	prefixes = getCSVColumn(text, 0);

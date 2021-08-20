@@ -1,19 +1,46 @@
-
 var prefixes = [];
 var suffixes = [];
 
 var ready = false;
 
-//var csvPath = "https://docs.google.com/spreadsheets/d/1T3-e6tCywND4s5K0HtBjPwJdwp_USsRCLa21hM9qrSM/pub?gid=0&single=true&output=csv"
-var csvPath = "SocComGen_names.csv";
+var localCsvPath = "SocComGen_names.csv";
+var sheetsCsvPath = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQq8sDTpUlOGfEr_NSGTslrvP36A7J1nZ1NkE1UNbv5j6RuN5yi8yF1S8HI9CKioGHXEkOpNxvJ7k-a/pub?output=csv"
 
-var jsonPath = "https://spreadsheets.google.com/feeds/list/1T3-e6tCywND4s5K0HtBjPwJdwp_USsRCLa21hM9qrSM/od6/public/values?alt=json&callback=dataCallback";
+$(document).ready(function () {
+	var data;
 
-$(document).ready(function() {
-	loadData();
+	$.ajax({
+		type: 'GET',
+		url: sheetsCsvPath,
+		data: data,
+		dataType: 'text',
+		success: getSuccess,
+		error: getError
+	});
 });
 
-function dataCallback( data ) {
+function getSuccess(data) {
+	console.log("Succeeded getting remote csv");
+
+	if (!data) {
+		console.log("Remote csv is empty");
+		loadLocalCSV(data);
+		return;
+	}
+
+	// TODO: Catch bad csv error?
+	loadWordsFromCSV(data);
+	ready = true;
+
+	console.log("Successfully loaded data from remote csv");
+}
+
+function getError() {
+	console.log("GET error detected");
+	loadLocalCSV();
+}
+
+function loadWordsFromJson(data) {
 	var rows = data.feed.entry;
 
 	prefixes = [];
@@ -32,21 +59,19 @@ function dataCallback( data ) {
 	setText();
 }
 
-function getCSVColumn( txt, column )
-{
+function getCSVColumn(txt, column) {
 	tds = null;
 
 	var rows = txt.split('\n');
 
 	var fin = [];
 
-	for ( var i = 0; i < rows.length; i++ ) {
+	for (var i = 0; i < rows.length; i++) {
 
 		tds = rows[i].split(',');
 
-		for ( var j = 0; j < tds.length; j++ ) {
-			if (j == column && tds[j] != "")
-			{
+		for (var j = 0; j < tds.length; j++) {
+			if (j == column && tds[j] != "") {
 				fin.push(tds[j]);
 			}
 		}
@@ -54,27 +79,34 @@ function getCSVColumn( txt, column )
 	return fin;
 }
 
+function loadWordsFromCSV(text) {
+	prefixes = getCSVColumn(text, 0);
+	suffixes = getCSVColumn(text, 1);
 
-function loadData() {
-	var url = csvPath;
-	xmlhttp = new XMLHttpRequest();
-
-	xmlhttp.onreadystatechange = function() {
-		if(xmlhttp.readyState == 4 && xmlhttp.status==200){
-			ready = true;
-			prefixes = getCSVColumn(xmlhttp.responseText, 0);
-			suffixes = getCSVColumn(xmlhttp.responseText, 1);
-
-			setText();
-		}
-	};
-	xmlhttp.open("GET",url,true);
-	xmlhttp.send(null);
+	setText();
 }
 
-//loadData();
+function loadLocalCSV() {
+	GetCSV(localCsvPath, function (text) {
+		loadWordsFromCSV(text);
+		ready = true;
 
+		console.log("Successfully loaded data from local csv");
+	});
+}
 
+function GetCSV(url, callback) {
+
+	xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.onreadystatechange = function () {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			callback(xmlhttp.responseText);
+		}
+	}
+	xmlhttp.open('GET', url, true);
+	xmlhttp.send(null);
+}
 
 function GetRandom(collection) {
 	return collection[Math.floor((Math.random() * collection.length))];
@@ -88,5 +120,5 @@ document.getElementById("mainBody").onclick = butClick;
 
 function butClick() {
 	if (ready)
-	setText();
+		setText();
 }

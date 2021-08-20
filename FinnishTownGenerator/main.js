@@ -25,8 +25,8 @@ $(document).ready(function () {
 });
 
 function enable() {
-	$("div#sign").show();
 	$("p#loading").hide();
+	$("div#sign").show();
 	ready = true;
 }
 

@@ -2,6 +2,9 @@
 var prefixes = [];
 var suffixes = [];
 
+var english_prefixes = [];
+var english_suffixes = [];
+
 var ready = false;
 
 var localCsvPath = "town_names.csv";
@@ -34,6 +37,9 @@ function loadWordsFromCSV(text) {
 	prefixes = getCSVColumn(text, 0);
 	suffixes = getCSVColumn(text, 2);
 
+	english_prefixes = getCSVColumn(text, 1);
+	english_suffixes = getCSVColumn(text, 3);
+
 	setText();
 }
 
@@ -42,9 +48,14 @@ function GetRandom(collection) {
 }
 
 function setText() {
-	var name = GetRandom(prefixes) + GetRandom(suffixes);
+	var i1 = 1 + Math.floor((Math.random() * (prefixes.length - 1)));
+	var i2 = 1 + Math.floor((Math.random() * (suffixes.length - 1)));
+
+	var name = prefixes[i1] + suffixes[i2];
 	name = name.toUpperCase();
 	document.getElementById("p1").innerHTML = name;
+
+	document.getElementById("translation_text").innerHTML = english_prefixes[i1] + " " + english_suffixes[i2];
 }
 
 document.getElementById("mainBody").onclick = butClick;

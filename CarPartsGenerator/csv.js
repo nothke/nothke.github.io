@@ -23,6 +23,8 @@ function getCSVColumn(txt, column) {
 		tds = rows[i].split(',');
 
 		for (var j = 0; j < tds.length; j++) {
+			tds[j] = tds[j].trim();
+
 			if (j == column && tds[j] != "") {
 				fin.push(tds[j]);
 			}

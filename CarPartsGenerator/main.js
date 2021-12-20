@@ -1,10 +1,7 @@
 var imenice = [];
 var imenice_rod = []
 var imenice_instrumental = [];
-
 var pridevi_m = [];
-var pridevi_f = [];
-var pridevi_n = [];
 
 var ready = false;
 
@@ -40,8 +37,6 @@ function loadWordsFromCSV(text) {
 	imenice_instrumental = getCSVColumn(text, 2);
 
 	pridevi_m = getCSVColumn(text, 3);
-	pridevi_f = getCSVColumn(text, 4);
-	pridevi_n = getCSVColumn(text, 5);
 
 	setText();
 }

@@ -1,0 +1,151 @@
+
+html, body {
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url("djunta_back.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 8px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* letter-spacing: 0.2ch; */
+    font-size: 64;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+
+}
+
+a {
+    color: rgb(23, 70, 122);
+}
+
+#sign {
+    background:#0059b8;
+    border-radius: 10px;
+    /*width: min-content;*/
+    /*margin: auto*/
+    outline: 3px solid #0059b8;
+    border: 5px solid white;
+
+}
+
+/*
+#pole {
+    background-image: url("pole.png");
+    background:#0059b8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+*/
+
+#loading {
+    font-size: 32;
+    font-family: monospace;
+}
+
+.help-line{
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 15;
+    color: rgb(0, 0, 0);
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+.my-block {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bottomBlock {
+    position: fixed;
+    top: 50vh;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.default {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15;
+    color: rgb(0, 0, 0);
+}
+
+.infobox {
+    position: fixed;
+    left: 0px;
+    top: 15px;
+    right: 0px;
+    bottom: 15px;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+    display: inline-block;
+    /*  border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    font-size: 20;
+
+    visibility: hidden;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -250px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+  /* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

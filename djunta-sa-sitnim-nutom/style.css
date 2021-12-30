@@ -20,13 +20,13 @@ body {
 
 p {
     margin: 8px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
     /* font-family: monospace; */
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Merriweather', serif;
     /* letter-spacing: 0.2ch; */
-    font-size: 64;
+    font-size: 60;
     font-weight: bold;
     text-align: center;
     color: black;

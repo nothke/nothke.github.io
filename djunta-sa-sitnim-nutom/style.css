@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: rgb(205, 194, 200);
     background-image: url("djunta_back.jpg");
     background-size: cover;
 

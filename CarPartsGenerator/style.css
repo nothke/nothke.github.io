@@ -22,7 +22,9 @@ p {
     margin: 8px;
     margin-left: 30px;
     margin-right: 30px;
-    font-family: 'Roboto Condensed', sans-serif;
+    /* font-family: monospace; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Merriweather', serif;
     /* letter-spacing: 0.2ch; */
     font-size: 64;
     font-weight: bold;
@@ -63,13 +65,14 @@ a {
 .help-line{
     font-weight: bold;
     font-family: monospace;
-    font-size: 15;
+    font-size: 20;
     color: rgb(0, 0, 0);
 }
 
 .footer {
     position: absolute;
     bottom: 20px;
+    text-align: center;
 }
 
 .my-block {
@@ -88,7 +91,7 @@ a {
 .default {
     font-family: monospace;
     font-weight: bold;
-    font-size: 15;
+    font-size: 20;
     color: rgb(0, 0, 0);
 }
 

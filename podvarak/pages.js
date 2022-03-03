@@ -1,5 +1,5 @@
 var links = [
-    "https://twitter.com/Nothke/status/1498986075712335874",
+    "https://twitter.com/Nothke/status/1498986075712335874", // ukraine
 
     "https://twitter.com/Nothke/status/1484912864578129924",
     "https://twitter.com/Nothke/status/1480311526493986818",
@@ -109,11 +109,6 @@ var links = [
     "https://twitter.com/Nothke/status/1364334792804859906",
     "https://twitter.com/Nothke/status/1361078267676143616", // cables
     "https://twitter.com/Nothke/status/1360720954226262016", // calling mechanic mechanic
-
-    //"https://twitter.com/Nothke/status/1353134133040582656",
-    //"https://twitter.com/Nothke/status/1332839521008963584",
-    //"https://twitter.com/Nothke/status/1332087563180519427",
-
 
     // nov
     "https://twitter.com/Nothke/status/1332839521008963584",

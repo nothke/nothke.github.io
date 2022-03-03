@@ -2,9 +2,80 @@ var links = [
     "https://twitter.com/Nothke/status/1484912864578129924",
     "https://twitter.com/Nothke/status/1480311526493986818",
 
-    "https://twitter.com/Nothke/status/1353134133040582656",
-    "https://twitter.com/Nothke/status/1332839521008963584",
-    "https://twitter.com/Nothke/status/1332087563180519427",
+
+    "https://twitter.com/Nothke/status/1479945121458266112",
+    "https://twitter.com/Nothke/status/1478459726438584329",
+    "https://twitter.com/Nothke/status/1477770194697297920",
+    "https://twitter.com/Nothke/status/1476380544485277701",
+    "https://twitter.com/Nothke/status/1475283243079503875",
+    "https://twitter.com/Nothke/status/1475246882108710914",
+    "https://twitter.com/Nothke/status/1474509602708496387",
+    "https://twitter.com/Nothke/status/1474368227740368918",
+    "https://twitter.com/Nothke/status/1474157833478451200",
+    "https://twitter.com/Nothke/status/1474113434979643392", // bicycle
+
+    "https://twitter.com/Nothke/status/1473787703888076803",
+    "https://twitter.com/Nothke/status/1473285612530774016",
+    "https://twitter.com/Nothke/status/1473077855659700225",
+    "https://twitter.com/Nothke/status/1472347277465427970",
+    "https://twitter.com/Nothke/status/1469860486594416644",
+    "https://twitter.com/Nothke/status/1469701266670559237", // deda podvarak cevapcici
+    "https://twitter.com/Nothke/status/1468313909354455044",
+    "https://twitter.com/Nothke/status/1468014490239258629",
+    "https://twitter.com/Nothke/status/1467269102574125057",
+    "https://twitter.com/Nothke/status/1466856972351950851",
+    "https://twitter.com/Nothke/status/1466515628043517952", // definitive edition
+    "https://twitter.com/Nothke/status/1466188097025196035",
+    "https://twitter.com/Nothke/status/1466179914353229833",
+    "https://twitter.com/Nothke/status/1465824980898390024",
+    "https://twitter.com/Nothke/status/1465101498203918351", // potholes 3d
+    "https://twitter.com/Nothke/status/1464416780647084035",
+    "https://twitter.com/Nothke/status/1464035500050849794",
+    "https://twitter.com/Nothke/status/1462917133038407684",
+    "https://twitter.com/Nothke/status/1462765553009975297",
+    "https://twitter.com/Nothke/status/1462551512794730499",
+    "https://twitter.com/Nothke/status/1461783121628651521",
+    "https://twitter.com/Nothke/status/1461696441148133394",
+    "https://twitter.com/Nothke/status/1458950109580902410",
+    "https://twitter.com/Nothke/status/1458919127486238726",
+    "https://twitter.com/Nothke/status/1458240843421204480",
+    "https://twitter.com/Nothke/status/1457145864565280769",
+    "https://twitter.com/Nothke/status/1456711738536218631", // flawless protection
+    "https://twitter.com/Nothke/status/1454599567102648321",
+    "https://twitter.com/Nothke/status/1452075499098935296",
+    "https://twitter.com/Nothke/status/1447082134963990528",
+    "https://twitter.com/Nothke/status/1416519988685508617",
+    "https://twitter.com/Nothke/status/1413998598484791302",
+    "https://twitter.com/Nothke/status/1412911180125978627",
+    "https://twitter.com/Nothke/status/1412797723527503879", // npc bus rides
+    "https://twitter.com/Nothke/status/1412196086387818503",
+    "https://twitter.com/Nothke/status/1412054383458766859",
+    "https://twitter.com/Nothke/status/1412050101531463681",
+    "https://twitter.com/Nothke/status/1412035091660935170",
+    "https://twitter.com/Nothke/status/1412027491909353475",
+    "https://twitter.com/Nothke/status/1411703902861508611",
+    "https://twitter.com/Nothke/status/1411441515168141313",
+    "https://twitter.com/Nothke/status/1411385830816550915",
+    "https://twitter.com/Nothke/status/1411245616244592641", // npc start
+    "https://twitter.com/Nothke/status/1410660334168424452",
+    "https://twitter.com/Nothke/status/1410001659716120583",
+    "https://twitter.com/Nothke/status/1409668445608677376", // morning mist
+    "https://twitter.com/Nothke/status/1407344084872728587",
+    "https://twitter.com/Nothke/status/1406011000885760002", // walk through hometown photos
+    "https://twitter.com/Nothke/status/1404588406571769861",
+    "https://twitter.com/Nothke/status/1405945032578932744",
+    "https://twitter.com/Nothke/status/1404235497719930881",
+    "https://twitter.com/Nothke/status/1403890349915922433", // smederevac
+    "https://twitter.com/Nothke/status/1402389990156419072",
+    "https://twitter.com/Nothke/status/1402206123214651392", // gamma to linear switch
+    "https://twitter.com/Nothke/status/1402030320656990208",
+    "https://twitter.com/Nothke/status/1401885179619201027",
+    "https://twitter.com/Nothke/status/1401678734286016513", // canister
+    "https://twitter.com/Nothke/status/1401289861898833920",
+
+    //"https://twitter.com/Nothke/status/1353134133040582656",
+    //"https://twitter.com/Nothke/status/1332839521008963584",
+    //"https://twitter.com/Nothke/status/1332087563180519427",
 
 
     // nov
@@ -27,13 +98,11 @@ var links = [
     "https://twitter.com/Nothke/status/1326548245498064896",
     "https://twitter.com/Nothke/status/1326303086709792774",
     "https://twitter.com/Nothke/status/1324837619772129281",
-    "https://twitter.com/Nothke/status/1322564777487597568",
     "https://twitter.com/Nothke/status/1322564777487597568", // overcast photos
     "https://twitter.com/Nothke/status/1322607552044113920",
     "https://twitter.com/Nothke/status/1320397342579871747",
     "https://twitter.com/Nothke/status/1320126377367097349",
     "https://twitter.com/Nothke/status/1319774270042624001",
-    "https://twitter.com/Nothke/status/1319016514289356801",
     "https://twitter.com/Nothke/status/1319016514289356801", // pathfinding
     //"https://twitter.com/Nothke/status/1318245888410722304",
     "https://twitter.com/Nothke/status/1318175874122977290",

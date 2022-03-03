@@ -3,10 +3,28 @@
     align-items: center;
 }
 
+h1 {
+    text-align: center;
+    font-size: 64px;
+    color: rgb(189, 76, 180);
+    font-family: Inconsolata, monospace;
+}
+
+p {
+    text-align: center;
+    color: rgb(93, 156, 121);
+    font-size: 20px;
+    font-family: Inconsolata, monospace;
+}
+
+a {
+    color: rgb(189, 76, 180);
+}
+
 .tweet {
     align-content: center;
 }
 
 body {
-    background-color: rgb(116, 145, 70);
+    background-color: rgb(31, 34, 22);
 }

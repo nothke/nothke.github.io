@@ -1,4 +1,6 @@
 var links = [
+    "https://twitter.com/Nothke/status/1498986075712335874",
+
     "https://twitter.com/Nothke/status/1484912864578129924",
     "https://twitter.com/Nothke/status/1480311526493986818",
 
@@ -72,6 +74,41 @@ var links = [
     "https://twitter.com/Nothke/status/1401885179619201027",
     "https://twitter.com/Nothke/status/1401678734286016513", // canister
     "https://twitter.com/Nothke/status/1401289861898833920",
+
+    "https://twitter.com/Nothke/status/1398761768076328960",
+    "https://twitter.com/Nothke/status/1396059765319643144",
+    "https://twitter.com/Nothke/status/1395898613612548099",
+    "https://twitter.com/Nothke/status/1395444031681871881",
+    "https://twitter.com/Nothke/status/1395162954392383489",
+    "https://twitter.com/Nothke/status/1394425083935039490",
+    "https://twitter.com/Nothke/status/1392603757129646081",
+    "https://twitter.com/Nothke/status/1385926755647623170",
+    "https://twitter.com/Nothke/status/1385662670062379010",
+    "https://twitter.com/Nothke/status/1385660075277172740",
+    "https://twitter.com/Nothke/status/1385430018331975680",
+    "https://twitter.com/Nothke/status/1384984888634449923",
+    "https://twitter.com/Nothke/status/1384573230560813057",
+    "https://twitter.com/Nothke/status/1383907606163431427",
+    "https://twitter.com/Nothke/status/1383601023562915853", // wiring up
+    "https://twitter.com/Nothke/status/1383153878615654415",
+    "https://twitter.com/Nothke/status/1382461530051117058",
+    "https://twitter.com/Nothke/status/1382006055723528192",
+    "https://twitter.com/Nothke/status/1381005199247048708",
+    "https://twitter.com/Nothke/status/1380280948386893828",
+    "https://twitter.com/Nothke/status/1378474002369380354", // wheel replacing
+    "https://twitter.com/Nothke/status/1373410623141388296", // script
+    "https://twitter.com/Nothke/status/1372627075186692097", // river
+    "https://twitter.com/Nothke/status/1371855440418586626",
+    "https://twitter.com/Nothke/status/1370506153474543616",
+    "https://twitter.com/Nothke/status/1370078231500570624",
+    "https://twitter.com/Nothke/status/1369313828417200128",
+    "https://twitter.com/Nothke/status/1367967872752975878", // serialization
+    "https://twitter.com/Nothke/status/1365804612939370498",
+    "https://twitter.com/Nothke/status/1365436885242380295",
+    "https://twitter.com/Nothke/status/1365073674928291845",
+    "https://twitter.com/Nothke/status/1364334792804859906",
+    "https://twitter.com/Nothke/status/1361078267676143616", // cables
+    "https://twitter.com/Nothke/status/1360720954226262016", // calling mechanic mechanic
 
     //"https://twitter.com/Nothke/status/1353134133040582656",
     //"https://twitter.com/Nothke/status/1332839521008963584",

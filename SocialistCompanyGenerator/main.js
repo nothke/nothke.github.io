@@ -66,7 +66,7 @@ function getCSVColumn(txt, column) {
 
 	var fin = [];
 
-	for (var i = 0; i < rows.length; i++) {
+	for (var i = 1; i < rows.length; i++) {
 
 		tds = rows[i].split(',');
 

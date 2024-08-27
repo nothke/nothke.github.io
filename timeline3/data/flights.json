@@ -1,0 +1,45 @@
+[
+    {
+        "name": "Vostok 1",
+        "craft": "Vostok-3KA No.3",
+        "launch": {
+            "time": "April 12, 1961, 06:07 UTC",
+            "site": "Baikonur 1/5"
+        },
+        "landing": {
+            "time": "April 12, 1961, 07:55 UTC"
+        },
+        "members": [
+            "Yuri Gagarin"
+        ],
+        "country": "USSR"
+    },
+    {
+        "name": "Vostok 2",
+        "craft": "Vostok-3KA No.4",
+        "launch": {
+            "time": "August 6, 1961, 06:00 UTC",
+            "site": "Baikonur 1/5"
+        },
+        "landing": {
+            "time": "August 7, 1961, 07:18 UTC",
+            "site": "Krasny Kut, 50.85276°N 47.02048°E"
+        },
+        "members": [
+            "Gherman Titov"
+        ],
+        "country": "USSR"
+    },
+    {
+        "name": "Skylab",
+        "launch": {
+            "time": "May 14, 1973 17:30:00 UTC",
+            "site": "Baikonur 1/5"
+        },
+        "landing": {
+            "time": "July 11, 1979 16:37:00 UTC",
+            "site": "KSC, LC-39A"
+        },
+        "country": "US"
+    }
+]

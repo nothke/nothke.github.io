@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СКЦ Пленуматор 5000</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            font-family: "Rubik", monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 36px;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            border: none;
+            outline: none;
+            background: transparent;
+            width: 80%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .editor-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60vw;
+            height: 70vh;
+        }
+        .number-bullets-container {
+            width: 30px;
+            height: 100%;
+            padding: 0;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            /* background: rgb(56, 55, 55); */
+            color: black;
+            resize: none;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .number-bullet-button {
+            font-family: "Rubik", monospace;
+            font-size: 16px;
+            color: #fffcf1;
+            cursor: pointer;
+            /* background-color: #7e1818;   */
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .number-bullet-button:hover {
+            background-color:#ad3536;
+        }
+
+        .editor {
+            font-family: "Rubik", monospace;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            background: white;
+            color: black;
+            resize: none;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+
+        .timer {
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            font-size: 62px;
+            font-weight: bold;
+            color: #333;
+        }
+        .dark-mode {
+            background: #1e1e1e;
+            color: white;
+        }
+        .dark-mode .editor {
+            /* background: #2e1f1f; */
+            background: transparent;
+            color: #fffcf1;
+        }
+        .dark-mode .title {
+            color: white;
+        }
+        .dark-mode .timer {
+            color: white;
+        }
+        .toggle-button {
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .buttons-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+        }
+        .timer-button {
+            width: 60px;
+            align-content: center;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons-container">
+        <!-- <button class="timer-button" id="toggleDarkMode">🌗</button> -->
+        <button class="timer-button" id="startTimer">▶</button>
+        <button class="timer-button" id="resetTimerButton">↩</button>
+        <button class="timer-button" id="add1Min">+1</button>
+        <button class="timer-button" id="sub1Min">-1</button>
+    </div>
+    <div class="timer" id="countdown">25:00</div>
+    <input type="text" class="title" placeholder="Унеси наслов овде..." value="СКЦ ПЛЕНУМ">
+    <div class="editor-container">
+        <div class="number-bullets-container" id="numberBulletsContainer">
+            <button class="number-bullet-button">1.</button><br>
+        </div>
+        <textarea class="editor" placeholder="Напиши нешто..."></textarea>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            const editor = document.querySelector('.editor');
+            const timerDisplay = document.getElementById('countdown');
+            const toggleButton = document.getElementById('toggleDarkMode');
+            const startTimerButton = document.getElementById('startTimer');
+            const add1MinButton = document.getElementById('add1Min');
+            const sub1MinButton = document.getElementById('sub1Min');
+            const resetTimerButton = document.getElementById('resetTimerButton');
+            const numberBulletsContainer = document.getElementById('numberBulletsContainer');
+
+            const colorWhite = "#f4f4f4";
+            const colorRed = "#ad3536";
+            const colorBlack = "#333";
+
+            const maxTime = 25 * 60;
+            let timeLeft = maxTime;
+            
+            let timerInterval;
+
+            function repaintTimer() {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+                if (minutes == 0 && seconds == 0) {
+                    timerDisplay.style.color = colorRed;
+                }
+                else {
+                    timerDisplay.style.color = colorWhite;
+                }
+            }
+
+            function updateTimer() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    
+                } else {
+                    clearInterval(timerInterval);
+                }
+
+                repaintTimer();
+            }
+
+            startTimerButton.addEventListener('click', () => {
+                repaintTimer();
+
+                
+
+                if (!timerInterval) {
+                    startTimerButton.innerText = "⏸"
+                    timerInterval = setInterval(updateTimer, 1000);
+                }
+                else {
+                    startTimerButton.innerText = "▶"
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+            });
+
+            function addMinuteTimer(by) {
+                timeLeft += by * 60;
+
+                if (timeLeft < 0)
+                    timeLeft = 0;
+
+                repaintTimer();
+            }
+
+            add1MinButton.addEventListener('click', () => {
+                addMinuteTimer(1);
+            });
+
+            sub1MinButton.addEventListener('click', () => {
+                addMinuteTimer(-1);
+            });
+
+            resetTimerButton.addEventListener('click', () => {
+                timeLeft = maxTime;
+                repaintTimer();
+            });
+
+            function renumberLines() {
+                let lines = editor.value.split('\n');
+                let numberedText = '';
+                let counter = 1;
+                
+                lines.forEach(line => {
+                    if (line.trim() !== '') {
+                        numberedText += `${counter}. ${line.replace(/^\d+\.\s*/, '')}\n`;
+                        counter++;
+                    } else {
+                        numberedText += '\n';
+                    }
+                });
+                
+                editor.value = numberedText.trim();
+            }
+
+            function rebuildNumberButtons() {
+                // clear
+                while ( numberBulletsContainer.firstChild ) numberBulletsContainer.removeChild( numberBulletsContainer.firstChild );
+
+                let lines = editor.value.split(/[\n]/);
+
+                const cursor = editor.selectionStart;
+                console.log(cursor);
+
+                for (let col = 0; col < lines.length; col++) {
+                    var but = document.createElement("button");
+                    but.number = col;
+                    but.addEventListener('click', (e) => numberButtonClicked(e));
+                    but.className = "number-bullet-button";
+                    but.innerText = (col + 1).toString() + ".";
+                    numberBulletsContainer.appendChild(but);
+                }
+            }
+
+            let selectedBullet = 0;
+
+            function numberButtonClicked(e) {
+                Array.from(numberBulletsContainer.children).forEach(element => {
+                    element.style.fontWeight = 'normal';
+                });
+
+                let i = e.currentTarget.number;
+                selectedBullet = i;
+
+                console.log('clicked ' + i);
+                let but = numberBulletsContainer.children[i];
+                but.style.fontWeight = 'bold';
+            }
+            
+            editor.addEventListener('input', (event) => {
+                // if (event.inputType === 'insertLineBreak' ) {
+                    // renumberLines();
+                    rebuildNumberButtons();
+                // }
+            });
+
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+</body>
+</html>

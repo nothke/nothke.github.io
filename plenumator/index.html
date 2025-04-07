@@ -89,6 +89,14 @@
             font-weight: bold;
             color: #333;
         }
+        .logo {
+            width: 150px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+            filter: invert(100%);
+        }
         .dark-mode {
             background: #1e1e1e;
             color: white;
@@ -140,6 +148,7 @@
     </style>
 </head>
 <body>
+    <img class="logo" src="skc_pecat.svg" />
     <div class="timer-buttons-container">
         <!-- <button class="timer-button" id="toggleDarkMode">🌗</button> -->
         <button class="timer-button" id="startTimer">▶</button>
@@ -152,6 +161,7 @@
         <button class="timer-button" id="next">></button>
     </div>
     <div class="timer" id="countdown">25:00</div>
+    
     <input type="text" class="title" placeholder="Унеси наслов овде..." value="СКЦ ПЛЕНУМ 7.4.">
     <div class="editor-container">
         <div class="editor" id="editor" contenteditable="true"><ol><li>Усвајање записника</li><li>Модератори и записничар</li><li>Дневни ред</li></ol><br><br><br><br></div>

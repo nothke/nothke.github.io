@@ -162,7 +162,7 @@
     </div>
     <div class="timer" id="countdown">25:00</div>
     
-    <input type="text" class="title" placeholder="Унеси наслов овде..." value="СКЦ ПЛЕНУМ 7.4.">
+    <input type="text" class="title" placeholder="Унеси наслов овде..." value="СКЦ ПЛЕНУМ 2.6.">
     <div class="editor-container">
         <div class="editor" id="editor" contenteditable="true"><ol><li>Усвајање записника</li><li>Модератори и записничар</li><li>Дневни ред</li></ol><br><br><br><br></div>
     </div>
@@ -198,6 +198,9 @@
 
                 if (minutes == 0 && seconds == 0) {
                     timerDisplay.style.color = colorRed;
+
+                    if (timerInterval != null)
+                        stopClock();
                 }
                 else {
                     timerDisplay.style.color = colorWhite;
@@ -225,11 +228,15 @@
                     timerInterval = setInterval(updateTimer, 1000);
                 }
                 else {
-                    startTimerButton.innerText = "▶"
-                    clearInterval(timerInterval);
-                    timerInterval = null;
+                    stopClock();
                 }
             });
+
+            function stopClock() {
+                startTimerButton.innerText = "▶"
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
 
             function addMinuteTimer(by) {
                 timeLeft += by * 60;
@@ -252,10 +259,6 @@
                 timeLeft = maxTime;
                 repaintTimer();
             });
-
-            function advancePoint() {
-
-            }
 
             let selectedBullet = 0;
 
@@ -296,7 +299,7 @@
                 }
 
                 liArray[selectedBullet].style.fontWeight = 500;
-                liArray[selectedBullet].style.backgroundColor = '#333333';
+                liArray[selectedBullet].style.backgroundColor = '#666666';
             }
 
             function boldLine() {
